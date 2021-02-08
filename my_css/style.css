@@ -1,0 +1,25 @@
+/*
+Theme Name: Test Theme
+Author: me!
+*/
+.minw-260 {
+  min-width: 260px;
+}
+#blackbox {
+  z-index: 4;
+  position: fixed;
+  opacity: 0.6;
+  background-color: black;
+  width:100vw;
+  height: 100vh;
+}
+* {
+  /*monospace*/
+  font-family:'Roboto Condensed', sans-serif;
+  margin:0px;
+  padding:0px;
+
+}
+body {
+  background-color: #eee;
+}
