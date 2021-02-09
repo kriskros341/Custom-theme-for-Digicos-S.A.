@@ -11,6 +11,9 @@ function load_stylesheets() {
 
   wp_register_style('page_content', get_template_directory_uri().'/my_css/page_content.css', array(), false, 'all');
   wp_enqueue_style('page_content');
+
+  wp_register_style('animations', get_template_directory_uri().'/my_css/animations.css', array(), false, 'all');
+  wp_enqueue_style('animations');
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 

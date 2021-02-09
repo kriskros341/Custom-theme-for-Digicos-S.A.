@@ -1,0 +1,120 @@
+
+#loading_placeholder {
+  max-width: 100%;
+  z-index: 9999;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  transition: opacity ease-in 1s;
+}
+#loading_placeholder .loading_image {
+  max-width:100%;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vw;
+}
+#loading_placeholder .loading_image svg {
+  overflow: visible;
+}
+#d9F1T3YlN,
+#a5ev9dufu,
+#bbCuK0YHG,
+#cpLcDQCdC,
+#l4biXoOtSr
+{
+  fill: #0a102d;
+}
+#l4biXoOtSr {
+  animation: loader1 0.6s infinite;
+}
+#bbCuK0YHG,
+#cpLcDQCdC {
+  animation: loader1 0.8s ease-in-out infinite 0.2s;
+}
+#d9F1T3YlN,
+#a5ev9dufu {
+  animation: loader1 0.9s infinite 0.3s;
+}
+@keyframes loader1 {
+  50% {
+    fill: red;
+  }
+}
+
+
+
+
+
+
+/* Animacje Navbaru */
+header.animate_hbgr #mobile_hbgr {
+  animation: drop-hbgr 0.45s linear forwards;
+}
+header.unanimate_hbgr #mobile_hbgr {
+  animation: hide-hbgr 0.45s ease-in-out forwards;
+}
+header.animate_hbgr .menu-navbar_mobile-container {
+  animation: drop-menu 0.5s ease-out forwards;
+}
+header.unanimate_hbgr .menu-navbar_mobile-container {
+  animation: hide-menu 0.5s ease-in forwards;
+}
+
+@keyframes drop-hbgr {
+  50% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(-40px)
+  }
+  100% {
+    transform: translateY(0px);
+    background-image: url("http://krzczu.skladzik.webd.pro/wp-content/uploads/2021/02/arrow-down.svg");
+    opacity: 1;
+  }
+}
+@keyframes drop-menu {
+  1% {
+    transform: translateX(150px);
+  }
+  50% {
+
+    height:50%;
+  }
+  100% {
+    height:100%;
+  }
+}
+@keyframes hide-menu {
+  0% {
+    height:100%
+  }
+  99% {
+    transform: translateX(100vw);
+    height:100%;
+  }
+  100% {
+    transform: translateX(100vw);
+    height:0%;
+  }
+}
+@keyframes hide-hbgr {
+  0% {
+    background-image: url("http://krzczu.skladzik.webd.pro/wp-content/uploads/2021/02/arrow-down.svg");
+  }
+  50% {
+    transform: translateX(40px) rotate(-90deg);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(-40px)
+  }
+  100% {
+    transform: translate(0px 0px) rotate(0deg);
+    opacity: 1;
+  }
+}
+/* Koniec Animacji Nabbaru */
