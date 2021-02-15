@@ -12,7 +12,7 @@
 <body <?php body_class(); ?>>
 <div id="loading_placeholder">
   <div class="loading_image">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="50vw" height="50vw"><defs>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" style="width:100vw;height:100vw;max-width:600px;max-height:600px;"><defs>
       <path d="M76.32 318.29C76.32 433.22 169.4 550 146.32 550C123.25 550 48.29 432.55 48.29 317.62C48.29 202.7 123.25 100 146.32 100C169.4 100 76.32 203.37 76.32 318.29Z" id="d9F1T3YlN"></path>
       <path d="M571.97 318.29C571.97 433.22 478.9 550 501.97 550C525.04 550 600 432.55 600 317.62C600 202.7 525.04 100 501.97 100C478.9 100 571.97 203.37 571.97 318.29Z" id="a5ev9dufu"></path>
       <path d="M495.9 319.78C495.9 409.17 402.83 500 425.9 500C448.97 500 523.93 408.65 523.93 319.26C523.93 229.87 448.97 150 425.9 150C402.83 150 495.9 230.4 495.9 319.78Z" id="bbCuK0YHG"></path>
@@ -25,7 +25,9 @@
 </div>
 <div id="blackbox" class="invisible"></div>
 <div class="container-fluid">
+  <style>
 
+  </style>
   <header class="row my_nav sticky-top shadow desktop_only">
     <div class="brand col-3">
       <a href="<?php echo site_url('front-page'); ?>"><img src="http://krzczu.skladzik.webd.pro/wp-content/uploads/2021/02/logo1.svg" alt="Logo Digicos Desktop S.A."/></a>
@@ -36,7 +38,6 @@
           'menu_class' => 'my_navigation',
         )
       )
-
     ?>
   </header>
 
@@ -45,9 +46,14 @@
     <div class="brand">
       <a href="<?php echo site_url('front-page'); ?>"><img src="http://krzczu.skladzik.webd.pro/wp-content/uploads/2021/02/logo1.svg" alt="Logo Mobile Digicos S.A."/></a>
     </div>
-    <div style="width:60vw"></div>
-    <div style="width:20vw;" class="hbgr">
-      <div id="mobile_hbgr"></div>
+    <div style="width:65vw"></div>
+    <div style="width:20vw;" class="hbgr" id="mobile_hbgr">
+      <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect id="r1" y="24" width="40" height="6" fill="white"/>
+        <rect id="r2" y="12" width="40" height="6" fill="white"/>
+        <rect id="r3" width="40" height="6" fill="white"/>
+      </svg>
+
     </div>
     <div id="mobile_menu">
 

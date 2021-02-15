@@ -21,19 +21,9 @@ ul {
 }
 .hbgr {
   display:flex;
+  justify-content: center;
   align-items: center
 }
-#mobile_hbgr {
-  overflow: hidden;
-  margin-left: auto;
-  background-image: url("http://krzczu.skladzik.webd.pro/wp-content/uploads/2021/02/Hbgr.svg");
-  background-repeat:no-repeat;
-  background-size: cover;
-  width:40px;
-  height:40px;
-  }
-
-
 .menu-navbar-container ul {
   display: flex;
   flex-direction: row;
@@ -56,13 +46,6 @@ ul {
   display:flex;
   flex-direction: row;
 }
-.menu-item {
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-  padding-right: 2vw;
-
-}
 .menu-item a {
   color: white;
 }
@@ -75,10 +58,33 @@ ul {
 .my_navigation li ul {
     display: none;
 }
+.menu-item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  text-transform: capitalize;
+  justify-content: center;
+  min-width: 8vw;
+  padding: 0 1vw;
+}
+.menu-item::before {
+  position: absolute;
+  content:"";
+  top: 0; right: 0; left: 0; bottom: 0;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0) scaleY(0);
+  transform-origin: left bottom;
+  background-color: red;
+  z-index:-1;
+}
+  .menu-item:hover::before,
+  .menu-item:focus::before {
+  transform: scaleX(1) scaleY(1);
+  }
+
 
 #mobile_menu {
   height:auto;
-  overflow-x: hidden;
   width:100%;
   padding-right: 0;
   padding-left: 0;
@@ -105,8 +111,8 @@ ul {
 }
 .my_navigation_mobile li {
   justify-content: center;
-  font-size: 4vh;
-  line-height: 8vh;
+  font-size: 3vh;
+  line-height: 6vh;
 }
 
 @media (min-width:768px){

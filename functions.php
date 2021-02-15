@@ -28,6 +28,7 @@ function load_my_js() {
   /*([name], [directory], [dependencies], [version(wut?!)], [is_it_in_the_footer?(bool)] )*/
   wp_register_script('my_js',  get_template_directory_uri().'/my_js/scripts.js', array(), 1, true);
   wp_enqueue_script('my_js');
+
 }
 add_action('wp_enqueue_scripts', 'load_my_js');
 

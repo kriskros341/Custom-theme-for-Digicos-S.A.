@@ -5,12 +5,14 @@ Author: me!
 .minw-260 {
   min-width: 260px;
 }
+
 #blackbox {
   z-index: 4;
   position: fixed;
   opacity: 0.6;
   background-color: black;
   width:100vw;
+  max-width:100%;
   height: 100vh;
 }
 * {
@@ -18,8 +20,50 @@ Author: me!
   font-family:'Roboto Condensed', sans-serif;
   margin:0px;
   padding:0px;
-
 }
+
+
 body {
   background-color: #eee;
+}
+.ml-20 {
+  left:12%;
+}
+.naglowek {
+  position:relative;
+  display:flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.naglowek div {
+  left:12%;
+  position: absolute;
+  color: #FFFFFF;
+}
+.naglowek div h1 {
+  font-size: 6vh;
+  font-weight: 500;
+  font-family: monospace;
+  font-style: normal;
+}
+@media (max-width:768px){
+  .naglowek {
+    margin-left:-12px;
+    width:100vw;
+    background: url(/wordpress/wp-content/uploads/2021/02/banner1_mobile.jpg);
+    background-position: 0 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vw;
+  }
+}
+@media (min-width:768px){
+  .naglowek {
+    background: url(/wordpress/wp-content/uploads/2021/02/banner1_desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-size: cover;
+    height: 25vw;
+  }
 }

@@ -26,7 +26,7 @@ const hide_placeholder = () => {
 }
 function hide_placeholder_handler() {
   loading_placeholder.style['opacity'] = 0
-  setTimeout(hide_placeholder, 1000)
+  setTimeout(hide_placeholder, 800)
 }
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(hide_placeholder_handler, 100)

@@ -1,19 +1,22 @@
 
 #loading_placeholder {
+  overflow-x: hidden;
   max-width: 100%;
   z-index: 9999;
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100vw;
   background-color: #eee;
-  transition: opacity ease-in 1s;
+  opacity: 0.8;
+  transition: opacity ease-in-out 0.5s;
+  border: 0px;
 }
 #loading_placeholder .loading_image {
   max-width:100%;
   display: flex;
   justify-content: center;
-  width: 100vw;
-  height: 100vw;
+  width: 90vw;
+  height: 90vw;
 }
 #loading_placeholder .loading_image svg {
   overflow: visible;
@@ -27,7 +30,7 @@
   fill: #0a102d;
 }
 #l4biXoOtSr {
-  animation: loader1 0.6s infinite;
+  animation: loader1 0.6s;
 }
 #bbCuK0YHG,
 #cpLcDQCdC {
@@ -49,17 +52,99 @@
 
 
 /* Animacje Navbaru */
-header.animate_hbgr #mobile_hbgr {
-  animation: drop-hbgr 0.45s linear forwards;
+header.animate_hbgr #mobile_hbgr #r3{
+  animation: rect_animation_3 0.3s linear forwards;
 }
-header.unanimate_hbgr #mobile_hbgr {
-  animation: hide-hbgr 0.45s ease-in-out forwards;
+header.animate_hbgr #mobile_hbgr #r2{
+  animation: rect_vanish 0.3s linear forwards;
+}
+header.animate_hbgr #mobile_hbgr #r1{
+  animation: rect_animation_1 0.3s linear forwards;
+}
+@keyframes rect_vanish {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rect_animation_3 {
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    fill: #B7162B;
+    transform-origin: center;
+    transform: rotate(45deg) translateY(12px);
+  }
+}
+@keyframes rect_animation_1 {
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    fill: #B7162B;
+    transform-origin: center;
+    transform: rotate(-45deg) translateY(-12px);
+  }
+}
+header.unanimate_hbgr #mobile_hbgr #r3{
+  animation: rect_reanimation_3 0.3s linear forwards;
+}
+header.unanimate_hbgr #mobile_hbgr #r2{
+  animation: rect_reappear 0.3s linear forwards;
+}
+header.unanimate_hbgr #mobile_hbgr #r1{
+  animation: rect_reanimation_1 0.3s linear forwards;
+}
+@keyframes rect_reanimation_3 {
+  0% {
+    transform-origin: center;
+    transform: rotate(45deg) translateY(12px);
+  }
+  50%{
+    transform: rotate(0deg) translateY(12px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+}
+@keyframes rect_reappear {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+@keyframes rect_reanimation_1 {
+  0% {
+    transform-origin: center;
+    transform: rotate(-45deg) translateY(-12px);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-12px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+}
+
+
+
+
+
+#mobile_menu {
+  transform-origin: top;
+
+}
+header.unanimate_hbgr #mobile_menu {
+  transition: transform 0.0s 0.3s;
+  transform: scaleY(0)
 }
 header.animate_hbgr .menu-navbar_mobile-container {
-  animation: drop-menu 0.5s ease-out forwards;
+  animation: drop-menu 0.3s ease-out forwards;
 }
 header.unanimate_hbgr .menu-navbar_mobile-container {
-  animation: hide-menu 0.5s ease-in forwards;
+  animation: hide-menu 0.3s ease-in forwards;
 }
 
 @keyframes drop-hbgr {
@@ -101,20 +186,3 @@ header.unanimate_hbgr .menu-navbar_mobile-container {
     height:0%;
   }
 }
-@keyframes hide-hbgr {
-  0% {
-    background-image: url("http://krzczu.skladzik.webd.pro/wp-content/uploads/2021/02/arrow-down.svg");
-  }
-  50% {
-    transform: translateX(40px) rotate(-90deg);
-    opacity: 0;
-  }
-  51% {
-    transform: translateY(-40px)
-  }
-  100% {
-    transform: translate(0px 0px) rotate(0deg);
-    opacity: 1;
-  }
-}
-/* Koniec Animacji Nabbaru */
